@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jockey+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/ljy6wcx.css">
+<link rel="stylesheet" href="..//css/style.css">
+<link rel="icon" type="image/x-icon" href="/img/nippon-logo.png">
+
+    <title>NIPPON</title>
+</head>
+<body>
+
+
+    <header>
+        <div class="topnav" id="myTopnav">
+
+            <div class="dropdown">
+              <button class="dropdownbtn">
+                <a href="#">Vores måltidskasser</a>
+              </button>
+              <div class="dropdown-content">
+                <a href="./menupunkter/måltidskasser.html">Måltidskasser</a>
+                <a href="#">Byg-Selv</a>
+                <a href="#">Ugens menu</a>
+              </div>
+            </div>
+    
+            <div class="dropdown">
+                <button class="dropdownbtn">
+                    <a href="/menupunkter/saadan-fungerer-det.html">Sådan fungerer det</a>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Abonnement</a>
+                </div>
+              </div>
+              <a href="/index.html"><img class="logo-nippon" src="..//img/nippon-logo.png" alt=""></a>
+              <div class="dropdown">
+                <button class="dropdownbtn">
+                  <a href="#">Om os</a>
+                </button>
+                <div class="dropdown-content">
+                  <a href="/menupunkter/mission-vision-vaerdier.html">Mission, vision og værdier</a>
+                  <a href="#">Anmeldelser</a>
+                </div>
+              </div>
+              
+              <div class="dropdown">
+                <button class="dropdownbtn">
+                    <a href="#">FAQ</a>
+                </button>
+              </div>
+    
+        </div>
+
+<img class="kurv" src="./img/kurv.png" alt="">
+
+        
+    </header>
+
+    <section id="mission">
+      <img class="mission-boks" src="/img/white-box-1.png">
+      <div class="text">
+        <p>&nbsp;&nbsp; &nbsp;</p>
+        </span>
+        <span class="word black">Mission.</span>
+        <span class="word black">Vision.</span>
+        <span class="word black">Værdier.</span>
+
+        </p>
+        </div>
+        
+        <script id="rendered-js">
+          var words = document.getElementsByClassName('word');
+          var wordArray = [];
+          var currentWord = 0;
+          
+          words[currentWord].style.opacity = 1;
+          for (var i = 0; i < words.length; i++) {
+          splitLetters(words[i]);
+          }
+          
+          function changeWord() {
+          var cw = wordArray[currentWord];
+          var nw = currentWord == words.length - 1 ? wordArray[0] : wordArray[currentWord + 1];
+          for (var i = 0; i < cw.length; i++) {
+          animateLetterOut(cw, i);
+          }
+          
+          for (var i = 0; i < nw.length; i++) {
+          nw[i].className = 'letter behind';
+          nw[0].parentElement.style.opacity = 1;
+          animateLetterIn(nw, i);
+          }
+          
+          currentWord = currentWord == wordArray.length - 1 ? 0 : currentWord + 1;
+          }
+          
+          function animateLetterOut(cw, i) {
+          setTimeout(function () {
+          cw[i].className = 'letter out';
+          }, i * 80);
+          }
+          
+          function animateLetterIn(nw, i) {
+          setTimeout(function () {
+          nw[i].className = 'letter in';
+          }, 340 + i * 80);
+          }
+          
+          function splitLetters(word) {
+          var content = word.innerHTML;
+          word.innerHTML = '';
+          var letters = [];
+          for (var i = 0; i < content.length; i++) {
+          var letter = document.createElement('span');
+          letter.className = 'letter';
+          letter.innerHTML = content.charAt(i);
+          word.appendChild(letter);
+          letters.push(letter);
+          }
+          
+          wordArray.push(letters);
+          }
+          
+          changeWord();
+          setInterval(changeWord, 4000);
+          
+          </script>
+
+
+
+      <h2>MISSION</h2>
+<p>Hos Nippon ønsker vi at bringe den autentiske smag af japansk mad direkte til vores kunders dør. Vi stræber efter at levere kvalitetsrige måltidskasser, der gør det nemt for folk at nyde lækre & innovative japanske retter i deres eget hjem.</p>
+
+<h2>VISION</h2>
+<p>Hos Nippon ønsker vi at bringe den autentiske smag af japansk mad direkte til vores kunders dør. Vi stræber efter at levere kvalitetsrige måltidskasser, der gør det nemt for folk at nyde lækre & innovative japanske retter i deres eget hjem.</p>
+
+<h2>VÆRDIER</h2>
+<p>Kvalitet: Vi forpligter os til at levere produkter af høj kvalitet. Vores ingredienser skal være friske, autentiske og nøje udvalgt for at sikre den bedste smagsoplevelse for vores kunder.
+
+  Innovation: Vi ønsker at være nytænkende og kreative. Vi eksperimenterer med nye japanske retter, introducerer sæsonbestemte ingredienser og overrasker vores kunder med unikke smagskombinationer.
+  
+  Passion: Vi elsker japansk mad, og det skal skinne igennem alt, hvad vi gør. Vi deler vores passion med vores kunder og skaber en følelse af fællesskab.</p>
+  </section>
+</body>
+</html>
